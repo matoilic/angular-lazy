@@ -1,5 +1,5 @@
 {
-  "name": "angular-lazy-toolbox",
+  "name": "angular-lazy",
   "version": "0.1.0",
   "description": "Utilities for projects based on the [Angular Lazy Generator](https://github.com/matoilic/generator-angular-lazy)",
   "main": "index.js",
@@ -16,6 +16,11 @@
     "url": "https://github.com/matoilic/angular-lazy/issues"
   },
   "homepage": "https://github.com/matoilic/angular-lazy#readme",
+  "files": [
+    "dist",
+    "src",
+    "readme.md"
+  ],
   "jspm": {
     "main": "dist/angular-lazy.js",
     "directories": {
