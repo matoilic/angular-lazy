@@ -1,7 +1,7 @@
 {
   "name": "angular-lazy-toolbox",
   "version": "0.1.0",
-  "description": "",
+  "description": "Utilities for projects based on the [Angular Lazy Generator](https://github.com/matoilic/generator-angular-lazy)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
