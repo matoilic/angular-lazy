@@ -1,0 +1,46 @@
+{
+  "name": "angular-lazy-toolbox",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matoilic/angular-lazy.git"
+  },
+  "author": "Mato Ilic",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/matoilic/angular-lazy/issues"
+  },
+  "homepage": "https://github.com/matoilic/angular-lazy#readme",
+  "jspm": {
+    "main": "dist/angular-lazy.js",
+    "directories": {
+      "lib": "dist"
+    },
+    "configFile": "config/system.js",
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.4.5"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "6.1.18",
+    "gulp": "3.9.0",
+    "gulp-babel": "6.1.0",
+    "gulp-protractor": "1.0.0"
+  },
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-ui-router": "^0.2.15",
+    "systemjs": "^0.19.6",
+    "ui-router-extras": "^0.1.0"
+  }
+}
