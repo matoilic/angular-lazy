@@ -4,7 +4,7 @@
 
 ## Routing
 
-The Angular Lazy module adds a state factory to the future states provider. The factory then takes care of loading your states of type load defined in routes.json at runtime.
+The Angular Lazy module adds a state factory to the future states provider. The factory then takes care of loading your states of type `load` defined in [states.json](https://github.com/matoilic/generator-angular-lazy#statesjson) at runtime.
  
 ## Component Loader Service
 

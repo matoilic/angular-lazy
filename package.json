@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "babel-preset-es2015": "6.1.18",
+    "eslint-config-angular-lazy": "^0.1.0",
     "gulp": "3.9.0",
     "gulp-babel": "6.1.0",
     "gulp-protractor": "1.0.0"
