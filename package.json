@@ -1,6 +1,6 @@
 {
   "name": "angular-lazy",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Utilities for projects based on the [Angular Lazy Generator](https://github.com/matoilic/generator-angular-lazy)",
   "main": "index.js",
   "scripts": {
