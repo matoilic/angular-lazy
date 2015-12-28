@@ -1,6 +1,6 @@
 {
   "name": "angular-lazy",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Utilities for projects based on the [Angular Lazy Generator](https://github.com/matoilic/generator-angular-lazy)",
   "main": "index.js",
   "scripts": {
@@ -41,7 +41,8 @@
     "eslint-config-angular-lazy": "^0.1.0",
     "gulp": "3.9.0",
     "gulp-babel": "6.1.0",
-    "gulp-protractor": "1.0.0"
+    "gulp-protractor": "1.0.0",
+    "gulp-sourcemaps": "1.6.0"
   },
   "dependencies": {
     "angular": "^1.4.8",

@@ -8,6 +8,10 @@ Object.defineProperty(exports, "__esModule", {
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+/**
+ * Wrapper around System
+ */
+
 var SystemService = (function () {
     function SystemService() {
         _classCallCheck(this, SystemService);
@@ -15,6 +19,13 @@ var SystemService = (function () {
 
     _createClass(SystemService, [{
         key: "import",
+
+        /**
+         * Imports a component from the given path, relative to the baseURL set in SystemJS.
+         *
+         * @param {String} path
+         * @returns {Promise}
+         */
         value: function _import(path) {
             return System.import(path).catch(function (err) {
                 console.error(err.stack);
