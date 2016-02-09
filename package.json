@@ -28,7 +28,7 @@
     },
     "configFile": "config/system.js",
     "dependencies": {
-      "angular": "github:angular/bower-angular@^1.4.5"
+      "angular": "github:angular/bower-angular@^1.5.0"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
@@ -45,9 +45,9 @@
     "gulp-sourcemaps": "1.6.0"
   },
   "dependencies": {
-    "angular": "^1.4.8",
+    "angular": "^1.5.0",
     "angular-ui-router": "^0.2.15",
-    "systemjs": "^0.19.6",
+    "systemjs": "^0.19.20",
     "ui-router-extras": "^0.1.0"
   }
 }
