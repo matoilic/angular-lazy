@@ -1,9 +1,10 @@
 {
   "name": "angular-lazy",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Utilities for projects based on the [Angular Lazy Generator](https://github.com/matoilic/generator-angular-lazy)",
   "main": "index.js",
   "scripts": {
+    "prepublish": "gulp compile",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
