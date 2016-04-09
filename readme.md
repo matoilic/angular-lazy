@@ -51,3 +51,7 @@ Imports a component from the given path, relative to the baseURL configured in S
 | Param | Type |
 | --- | --- |
 | path | <code>String</code> | 
+
+## License
+
+Licensed under [BSD 3-Clause](https://github.com/matoilic/angular-lazy/blob/master/license.md).
