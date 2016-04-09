@@ -20,6 +20,7 @@
   "files": [
     "dist",
     "src",
+    "license.md",
     "readme.md"
   ],
   "jspm": {
