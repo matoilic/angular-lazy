@@ -1,5 +1,8 @@
 # Angular Lazy
 
+[![Dependency Status](https://david-dm.org/matoilic/angular-lazy.svg)](https://david-dm.org/matoilic/angular-lazy)
+[![devDependency Status](https://david-dm.org/matoilic/angular-lazy/dev-status.svg)](https://david-dm.org/matoilic/angular-lazy#info=devDependencies)
+
 > Utilities for projects based on the [Angular Lazy Generator](https://github.com/matoilic/generator-angular-lazy).
 
 ## Routing
