@@ -18,7 +18,7 @@ function routingConfig($futureStateProvider) {
             .catch(console.error.bind(console)) // eslint-disable-line no-console
     ]);
 
-    $futureStateProvider.stateFactory('given', ['$q', ($q) => $q.resolve()]);
+    $futureStateProvider.stateFactory('given', ['$q', $q => $q.resolve()]);
 }
 
 export default [

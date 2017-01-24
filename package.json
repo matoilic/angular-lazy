@@ -19,7 +19,8 @@
     "readme.md"
   ],
   "devDependencies": {
-    "eslint": "^3.14.0"
+    "eslint": "^3.14.0",
+    "eslint-config-angular-lazy": "^0.2.1"
   },
   "dependencies": {},
   "peerDependencies": {

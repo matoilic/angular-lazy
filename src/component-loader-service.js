@@ -32,7 +32,7 @@ class ComponentLoaderService {
                 }
 
                 componentName = loadedComponent[name].name || loadedComponent[name];
-            } else if(loadedComponent.default) {
+            } else if (loadedComponent.default) {
                 componentName = loadedComponent.default.name || loadedComponent.default;
             } else {
                 componentName = loadedComponent.name || loadedComponent;
@@ -57,7 +57,7 @@ class ComponentLoaderService {
      */
     resolve(importer, identifier, exportName) {
         return this
-            .loadComponent(importer)
+            .loadComponent(importer, exportName)
             .then(() => this._$injector.get(identifier));
     }
 }

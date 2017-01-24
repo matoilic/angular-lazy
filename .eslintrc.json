@@ -1,3 +1,10 @@
 {
-  "extends": "eslint-config-angular-lazy"
+  "extends": "eslint-config-angular-lazy",
+  "settings": {
+    "import/core-modules": [
+      "angular",
+      "angular-ui-router",
+      "ui-router-extras"
+    ]
+  }
 }
