@@ -1,6 +1,6 @@
 {
   "name": "angular-lazy",
-  "version": "0.3.0-beta.0",
+  "version": "0.3.0-beta.1",
   "description": "Utilities for projects based on the [Angular Lazy Generator](https://github.com/matoilic/generator-angular-lazy)",
   "main": "src/angular-lazy.js",
   "repository": {
