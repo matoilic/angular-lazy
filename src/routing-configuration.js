@@ -1,3 +1,7 @@
+/**
+ * Registers a handler to $futureStateProvider (ui-router-extras) which is used to load our routes at runtime.
+ * @param $futureStateProvider
+ */
 function routingConfig($futureStateProvider) {
     $futureStateProvider.stateFactory('load', [
         '$q',

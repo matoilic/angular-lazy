@@ -1,5 +1,5 @@
 /**
- * Provides functionality to load components at runtime.
+ * Provides functionality to lazily load components at runtime.
  */
 class ComponentLoaderService {
     /**
@@ -13,21 +13,32 @@ class ComponentLoaderService {
     }
 
     /**
-     * Loads a component with the given name. It will automatically look for the component in the components folder.
-     * E.g. if you pass `popup` it will try to load the component from "components/popup/index".
+     * Loads an Angular component and makes sure it is bootstrapped properly.
      *
-     * @param {Promise} importFn
+     * @param {Promise} importer A promise that resolves to a Angular module. This will usually be the return value of
+     * an `import()` call. We do not call `import` in `loadComponent` itself because most module bundlers cannot handle
+     * dynamic imports and are not able to split code properly if we use `import` in here.
+     * @param {string} name Optional. If the Angular module to import is not exported as default, you can pass the name
+     * under which to find the module.
      * @returns {Promise}
      */
-    loadComponent(importFn) {
-        return importFn.then(loadedComponent => {
-            const componentName = loadedComponent.name || loadedComponent.default.name || loadedComponent;
+    loadComponent(importer, name) {
+        return importer.then((loadedComponent) => {
+            let componentName;
 
-            if (!this._$ocLazyLoad.isLoaded(componentName)) {
-                return this._$ocLazyLoad.inject(componentName);
+            if (name) {
+                if (!loadedComponent[name]) {
+                    throw new Error(`No exported module found under "${name}", did you misspell it?`);
+                }
+
+                componentName = loadedComponent[name].name || loadedComponent[name];
+            } else if(loadedComponent.default) {
+                componentName = loadedComponent.default.name || loadedComponent.default;
+            } else {
+                componentName = loadedComponent.name || loadedComponent;
             }
 
-            return null;
+            return this._$ocLazyLoad.inject(componentName);
         });
     }
 
@@ -35,13 +46,18 @@ class ComponentLoaderService {
      * Resolves an Angular injectable, e.g. service or constant, from the given component. If ensures that the component
      * is loaded before trying to resolve the injectable.
      *
-     * @param {Promise} importFn
-     * @param {String} identifier
+     * @param {Promise} importer A promise that resolves to a Angular module. This will usually be the return value of
+     * an `import()` call. We do not call `import` in `loadComponent` itself because most module bundlers cannot handle
+     * dynamic imports and are not able to split code properly if we use `import` in here.
+     * @param {String} identifier The identifier of the injectable which should be resolved from the imported Angular
+     * module.
+     * @param {string} exportName Optional. If the Angular module to import is not exported as default, you can pass
+     * the name under which to find the module.
      * @returns {Promise}
      */
-    resolve(importFn, identifier) {
+    resolve(importer, identifier, exportName) {
         return this
-            .loadComponent(importFn)
+            .loadComponent(importer)
             .then(() => this._$injector.get(identifier));
     }
 }
